@@ -1,0 +1,12 @@
+<launch>
+  <!-- Launch mavros -->
+  <arg name="fcu_url" default="udp://:14540@127.0.0.1:14557" />
+  <node pkg="mavros" type="mavros_node" name="mavros" output="screen">
+    <param name="fcu_url" value="$(arg fcu_url)" />
+  </node>
+
+  <!-- Launch drone_node -->
+  <node pkg="drone_pkg" type="drone_node" name="drone_node" output="screen" />
+
+</launch>
+

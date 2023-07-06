@@ -1,0 +1,7 @@
+<launch>
+  <!-- Start MPC_node -->
+  <node pkg="drone_pkg" type="MPC_node" name="mpc_node" output="screen"/>
+
+  <!-- Start drone_node -->
+  <node pkg="drone_pkg" type="drone_node" name="drone_node" output="screen"/>
+</launch>
